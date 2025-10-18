@@ -1,0 +1,13 @@
+{
+  "name": "colive-website",
+  "version": "1.0.0",
+  "description": "CoLive - Co-Living Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "vercel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
