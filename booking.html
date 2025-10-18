@@ -236,8 +236,23 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="config.js"></script>
     <script>
+        let emailConfig = {};
+        
+        // Load configuration from API
+        fetch('/api/config')
+            .then(response => response.json())
+            .then(config => {
+                emailConfig = config;
+                console.log('Initializing EmailJS with:', emailConfig.generalPublicKey);
+                emailjs.init({
+                    publicKey: emailConfig.generalPublicKey
+                });
+            })
+            .catch(error => {
+                console.error('Failed to load config:', error);
+            });
+        
         // Terms and Conditions Modal Functions
         function openTermsModal() {
             document.getElementById('terms-modal').style.display = 'block';
@@ -254,13 +269,6 @@
                 modal.style.display = 'none';
             }
         }
-        
-        // Initialize EmailJS
-        console.log('Initializing EmailJS with:', emailConfig.generalPublicKey);
-        console.log('Full config:', emailConfig);
-        emailjs.init({
-            publicKey: emailConfig.generalPublicKey
-        });
         
         // Set minimum date to today
         document.getElementById('moveInDate').min = new Date().toISOString().split('T')[0];
