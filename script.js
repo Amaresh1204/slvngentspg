@@ -32,7 +32,7 @@ const properties = [
         name: "Double Sharing Room",
         type: "double",
         price: "₹12,000",
-        image: "images/double sharing 1.jpg",
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         features: ["WiFi", "AC", "3-Time Meals", "Attached Bath"],
         description: "Comfortable double sharing room with all facilities and meals included.",
         amenities: ["CCTV Security", "Washing Machine", "24/7 TV", "Attached Bathroom"]
@@ -42,7 +42,7 @@ const properties = [
         name: "Triple Sharing Room",
         type: "triple",
         price: "₹10,000",
-        image: "images/triple sharing.jpg",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         features: ["WiFi", "AC", "3-Time Meals", "Attached Bath"],
         description: "Budget-friendly triple sharing room with all basic amenities.",
         amenities: ["CCTV Security", "Washing Machine", "24/7 TV", "Attached Bathroom"]
